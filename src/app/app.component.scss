@@ -1,0 +1,27 @@
+.header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  background-color: red;
+  color: white;
+  top: 0;
+  left: 0;
+  bottom: calc(100vh - 4em);
+  right: 0;
+
+  &__title {
+    font-family: Gurajada, cursive;
+    display: flex;
+    align-items: center;
+    font-size: 3.8em;
+
+    &::before {
+      content: "";
+      background-image: url("../assets/images/3rddegree-transparent.png");
+      background-size: cover;
+      height: 0.9em;
+      width: 0.9em;
+      margin: 0 0.4em;
+    }
+  }
+}

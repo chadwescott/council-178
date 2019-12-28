@@ -1,0 +1,30 @@
+@import 'variables';
+
+%primary-background-color {
+  background-color: rgb(200, 0, 0);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), $light-shadow);
+}
+
+%dark-border {
+  border: 2px solid rgba(0, 0, 0, 0.4);
+}
+
+%dark-bottom-border {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+}
+
+%light-box-shadow {
+  box-shadow: 2px 2px 4px 1px $light-shadow;
+}
+
+%medium-box-shadow {
+  box-shadow: 2px 2px 4px 1px $medium-shadow;
+}
+
+%dark-box-shadow {
+  box-shadow: 2px 2px 4px 1px $dark-shadow;
+}
+
+%text-shadow {
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.8);
+}

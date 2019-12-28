@@ -1,0 +1,10 @@
+.officer-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+
+  & > *:not(:last-child) {
+    margin-right: 0.8em;
+  }
+}

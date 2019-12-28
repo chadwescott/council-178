@@ -1,18 +1,18 @@
 @import '../assets/scss/variables';
+@import '../assets/scss/placeholders';
 
 .header {
+  @extend %primary-background-color;
+  @extend %dark-bottom-border;
+  @extend %text-shadow;
   font-family: Garamond;
   display: flex;
   flex-flow: row;
   align-items: center;
-  text-shadow: 2px 2px rgba(0, 0, 0, 0.8);
   justify-content: flex-start;
-  background-color: rgb(200, 0, 0);
   color: white;
   padding: 0.4em;
-  border-bottom: solid 2px rgba(0, 0, 0, 0.4);
   box-shadow: 0 2px 2px $light-shadow;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), $light-shadow);
 
   @media (min-width: $medium-size) {
     letter-spacing: 1px;

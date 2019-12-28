@@ -1,0 +1,56 @@
+@import '../../../assets/scss/placeholders';
+
+.officer-details {
+  @extend %primary-background-color;
+  @extend %dark-border;
+  @extend %light-box-shadow;
+  display: grid;
+  grid-template-areas: 'profile profile' 'jewel name' 'jewel role';
+  align-items: center;
+  justify-content: start;
+  margin: 0 auto;
+  width: 20em;
+  margin-bottom: 10px;
+  padding: 0.4em 1em;
+  color: white;
+  border-radius: 15px;
+
+  &__jewel {
+    grid-area: jewel;
+    padding-right: 0.4em;
+
+    & > img {
+      @extend %dark-border;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: bottom center;
+      background-image: attr(src);
+    }
+  }
+
+  &__name {
+    @extend %text-shadow;
+    grid-area: name;
+  }
+
+  &__role {
+    @extend %text-shadow;
+    grid-area: role;
+    font-size: 20px;
+  }
+
+  &__profile {
+    grid-area: profile;
+
+    & > img {
+      @extend %dark-border;
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+}

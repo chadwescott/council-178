@@ -6,5 +6,6 @@
   </div>
 </div>
 <div class="content">
-  <kofc-officer-list [officers]="officers"></kofc-officer-list>
+  <a [routerLink]="['/']">Home</a> | <a [routerLink]="['/officers']">Officers</a>
+  <router-outlet></router-outlet>
 </div>

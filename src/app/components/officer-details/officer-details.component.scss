@@ -4,20 +4,28 @@
   @extend %primary-background-color;
   @extend %dark-border;
   @extend %light-box-shadow;
-  display: grid;
-  grid-template-areas: 'profile profile' 'jewel name' 'jewel role';
-  align-items: center;
-  justify-content: start;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
   margin: 0 auto;
   width: 20em;
   margin-bottom: 10px;
-  padding: 0.4em 1em;
+  padding: 0.6em 0.6em;
   color: white;
   border-radius: 15px;
 
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 0.2em;
+  }
+
   &__jewel {
-    grid-area: jewel;
     padding-right: 0.4em;
+    margin-left: -2em;
+    z-index: 1;
 
     & > img {
       @extend %dark-border;
@@ -26,24 +34,20 @@
       border-radius: 50%;
       object-fit: cover;
       object-position: bottom center;
-      background-image: attr(src);
     }
   }
 
   &__name {
     @extend %text-shadow;
-    grid-area: name;
+    font-size: 20px;
+    padding-bottom: 0.1em;
   }
 
   &__role {
     @extend %text-shadow;
-    grid-area: role;
-    font-size: 20px;
   }
 
   &__profile {
-    grid-area: profile;
-
     & > img {
       @extend %dark-border;
       height: 100px;

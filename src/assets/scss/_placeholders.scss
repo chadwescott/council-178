@@ -1,16 +1,20 @@
 @import 'variables';
 
 %primary-background-color {
-  background-color: rgb(200, 0, 0);
+  background-color: $primary-background-color;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), $light-shadow);
 }
 
 %dark-border {
-  border: 1px solid rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(0, 0, 0, 0.4);
 }
 
 %dark-bottom-border {
   border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+}
+
+%light-border {
+  border: 2px solid white;
 }
 
 %light-box-shadow {

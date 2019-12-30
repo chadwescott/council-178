@@ -10,8 +10,8 @@ import { Officer } from 'src/models/officer';
 export class OfficersComponent implements OnInit {
   officers: Officer[];
 
-  constructor(private _officerService: OfficerService) {
-    _officerService.getOfficers(2020).subscribe(x => this.officers = x);
+  constructor(officerService: OfficerService) {
+    officerService.getOfficers(2020).subscribe(x => this.officers = x);
   }
 
   ngOnInit() {

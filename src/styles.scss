@@ -2,12 +2,14 @@
 @import 'assets/scss/layout';
 @import 'assets/scss/mixins';
 @import 'assets/scss/placeholders';
+@import 'assets/scss/formatting';
 
 html,
 body {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    font-family: Arial;
+  font-family: Arial;
+  background-color: $background-color;
 }

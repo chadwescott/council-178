@@ -23,15 +23,16 @@
   }
 
   &__jewel {
-    padding-right: 0.4em;
-    margin-left: -2em;
+    padding-right: 0.6em;
+    margin-left: -1.8em;
     z-index: 1;
 
     & > img {
-      @extend %dark-border;
-      height: 50px;
-      width: 50px;
-      border-radius: 50%;
+      //   @extend %light-border;
+      box-shadow: 0 0 0 1px white, 0 0 0 3px black, 2px 2px 4px 3px $medium-shadow;
+      height: 40px;
+      width: 40px;
+      border-radius: 6px;
       object-fit: cover;
       object-position: bottom center;
     }
@@ -50,6 +51,7 @@
   &__profile {
     & > img {
       @extend %dark-border;
+      @extend %medium-box-shadow;
       height: 100px;
       width: 100px;
       border-radius: 50%;

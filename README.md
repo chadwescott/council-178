@@ -24,6 +24,8 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Publishing to GitHub pages
 
+First build the project with the following command `ng build --prod --delete-output-path --base-href .`. The `--base-href` option is important to get the routing working properly on GitHub. If you set the `--base-href` option to the GitHub application name, i.e. `kofc-council-178` it duplicates the path in the url (`kofc-council-178/kofc-council-178`) and omitting the `--base-href` option causes GitHub pages to look for artifacts in the root and not find them.
+
 Run `ngh --branch=master --dir=dist/kofc --repo=https://github.com/chadwescott/kofc-council-178.git`
 
 ## Further help

@@ -1,0 +1,73 @@
+@import '../../../assets/scss/placeholders';
+
+.header {
+  @extend %primary-background-color;
+  @extend %dark-bottom-border;
+  @extend %text-shadow;
+  font-family: Garamond;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  padding: 0.4em;
+  box-shadow: 0 2px 2px $light-shadow;
+
+  @media (min-width: $medium-size) {
+    letter-spacing: 1px;
+  }
+
+  &::before {
+    content: '';
+    background-image: url('../../../assets/images/3rddegree-transparent.png');
+    background-size: cover;
+    margin-right: 0.6em;
+    height: 40px;
+    width: 40px;
+
+    @media (min-width: $small-size) {
+      height: 50px;
+      width: 50px;
+    }
+
+    @media (min-width: $medium-size) {
+      height: 70px;
+      width: 70px;
+    }
+  }
+
+  &__council-name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+
+  &--title {
+    font-size: 20px;
+
+    @media (min-width: $small-size) {
+      font-size: 24px;
+    }
+
+    @media (min-width: $medium-size) {
+      font-size: 42px;
+    }
+  }
+
+  &--subtitle {
+    font-size: 10px;
+
+    @media (min-width: $small-size) {
+      font-size: 12px;
+    }
+
+    @media (min-width: $medium-size) {
+      font-size: 20px;
+    }
+  }
+}
+
+.menu {
+  margin: 0.4em;
+}

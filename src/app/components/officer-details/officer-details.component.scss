@@ -1,34 +1,62 @@
 @import '../../../assets/scss/placeholders';
 
 .officer-details {
-  @extend %primary-background-color;
-  @extend %dark-border;
   @extend %light-box-shadow;
+  background-color: $knights-blue;
   position: relative;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
   justify-content: flex-start;
-  margin: 0 auto;
-  width: 20em;
-  margin-bottom: 10px;
-  padding: 0.6em 0.6em;
-  color: white;
-  border-radius: 15px;
+  margin-bottom: 1.2em;
+  width: 18em;
+  padding-top: 0.4em;
+  border-radius: 15px 15px 0 0;
 
-  &__body {
+  &__profile {
+    @extend %knights-box-shadow;
+    border-radius: 50% 50% 0 0;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    margin-bottom: 0.2em;
+    align-items: center;
+
+    & > img {
+      @extend %dark-border;
+      @extend %medium-box-shadow;
+      height: 150px;
+      width: 150px;
+      border-radius: 50% 50% 0 0;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+
+  &__footer {
+    background-color: $knights-red;
+    border-top: 4px solid $knights-yellow;
+    border-bottom: 4px solid $knights-yellow;
+    width: 100%;
+    padding: 0.4em 0.6em;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: -1.4em;
+
+    &__details {
+      @extend %text-shadow;
+      display: flex;
+      flex-direction: column;
+      color: white;
+    }
   }
 
   &__jewel {
     padding-right: 0.6em;
-    margin-left: -1.8em;
     z-index: 1;
+    display: flex;
+    align-items: center;
 
     & > img {
-      //   @extend %light-border;
+      @extend %light-border;
       box-shadow: 0 0 0 1px white, 0 0 0 3px black, 2px 2px 4px 3px $medium-shadow;
       height: 40px;
       width: 40px;
@@ -39,24 +67,7 @@
   }
 
   &__name {
-    @extend %text-shadow;
     font-size: 20px;
     padding-bottom: 0.1em;
-  }
-
-  &__role {
-    @extend %text-shadow;
-  }
-
-  &__profile {
-    & > img {
-      @extend %dark-border;
-      @extend %medium-box-shadow;
-      height: 100px;
-      width: 100px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: center center;
-    }
   }
 }

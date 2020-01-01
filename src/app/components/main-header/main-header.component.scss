@@ -70,4 +70,14 @@
 
 .menu {
   margin: 0.4em;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+
+  & > div:not(:last-child) {
+    &::after {
+      content: '|';
+      margin: 0 0.4em;
+    }
+  }
 }

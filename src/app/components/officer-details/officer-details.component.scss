@@ -2,6 +2,7 @@
 
 .officer-details {
   @extend %light-box-shadow;
+  @extend %shadow-overlay-gradient;
   background-color: $knights-blue;
   position: relative;
   display: flex;
@@ -18,10 +19,9 @@
     border-radius: 50% 50% 0 0;
     display: flex;
     align-items: center;
+    z-index: 1;
 
     & > img {
-      @extend %dark-border;
-      @extend %medium-box-shadow;
       height: 150px;
       width: 150px;
       border-radius: 50% 50% 0 0;
@@ -31,36 +31,50 @@
   }
 
   &__footer {
+    position: relative;
     background-color: $knights-red;
-    border-top: 4px solid $knights-yellow;
-    border-bottom: 4px solid $knights-yellow;
+    border-top: $box-shadow-width solid $knights-yellow;
+    border-bottom: $box-shadow-width solid $knights-yellow;
     width: 100%;
     padding: 0.4em 0.6em;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: flex-start;
     margin-top: -1.4em;
+    z-index: 1;
+
+    &::before {
+      @extend %shadow-overlay-gradient;
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
 
     &__details {
       @extend %text-shadow;
       display: flex;
       flex-direction: column;
       color: white;
+      z-index: 2;
     }
   }
 
   &__jewel {
     padding-right: 0.6em;
-    z-index: 1;
     display: flex;
     align-items: center;
+    z-index: 2;
 
     & > img {
-      @extend %light-border;
-      box-shadow: 0 0 0 1px white, 0 0 0 3px black, 2px 2px 4px 3px $medium-shadow;
-      height: 40px;
-      width: 40px;
-      border-radius: 6px;
+      box-shadow: 0 0 0 1px $knights-blue, 0 0 0 4px $knights-yellow, 0 0 0 5px $knights-blue, 5px 5px 2px $light-shadow;
+      margin: 5px;
+      height: 38px;
+      width: 38px;
+      border-radius: 4px;
       object-fit: cover;
       object-position: bottom center;
     }
@@ -68,6 +82,6 @@
 
   &__name {
     font-size: 20px;
-    padding-bottom: 0.1em;
+    margin-bottom: 0.1em;
   }
 }

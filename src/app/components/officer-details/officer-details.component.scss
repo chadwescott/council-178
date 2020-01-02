@@ -1,8 +1,8 @@
 @import '../../../assets/scss/placeholders';
 
 .officer-details {
-  @extend %light-box-shadow;
   @extend %shadow-overlay-gradient;
+  border-top: $knights-yellow-border;
   background-color: $knights-blue;
   position: relative;
   display: flex;
@@ -12,7 +12,17 @@
   margin-bottom: 1.2em;
   width: 18em;
   padding-top: 0.4em;
-  border-radius: 15px 15px 0 0;
+
+  &::before {
+    @extend %light-box-shadow;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+  }
 
   &__profile {
     @extend %knights-box-shadow;

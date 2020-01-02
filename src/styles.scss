@@ -4,6 +4,11 @@
 @import 'assets/scss/placeholders';
 @import 'assets/scss/formatting';
 
+@font-face {
+  font-family: Gurajada;
+  src: url(./assets/fonts/Gurajada-Regular.ttf);
+}
+
 html,
 body {
   height: 100%;

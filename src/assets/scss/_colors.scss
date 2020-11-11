@@ -1,3 +1,13 @@
+@use '~@angular/material/theming';
+@include theming.mat-core();
+
+$app-primary: theming.mat-palette(theming.$mat-red, 900);
+$app-accent: theming.mat-palette(theming.$mat-red, 700, A400, 900);
+
+// Material theming uses the mat-red palette by default for warn
+$light-theme: theming.mat-light-theme($app-primary, $app-accent);
+@include theming.angular-material-theme($light-theme);
+
 $primary-color: red;
 $secondary-color: white;
 $primary-background-color: rgb(200, 0, 0);

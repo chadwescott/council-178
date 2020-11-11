@@ -108,6 +108,6 @@ export class OfficerService {
         '',
         2020)
     ];
-    return of(officers);
+    return of(officers.filter(x => x.year === year));
   }
 }

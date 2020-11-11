@@ -1,15 +1,10 @@
-<div class="header">
-    <div class="header__logo"></div>
-    <div class="header__council-name">
-        <h1 class="header--title">Archbishop Fulton J. Sheen</h1>
-        <h2 class="header--subtitle">Council #178</h2>
-    </div>
-</div>
-<div class="menu">
-    <div class="menu__link">
-        <a [routerLink]="['/']">Home</a>
-    </div>
-    <div class="menu__link">
-        <a [routerLink]="['/officers']">Officers</a>
-    </div>
-</div>
+<header>
+    <mat-toolbar color="primary">
+        <button mat-icon-button>
+            <mat-icon>menu</mat-icon>
+        </button>
+        <div class="kofc-logo"></div>
+        <div>Archbishop Fulton J. Sheen Council #178</div>
+        <span class="example-spacer"></span>
+    </mat-toolbar>
+</header>

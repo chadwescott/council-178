@@ -1,4 +1,4 @@
-@import 'colors';
+@use 'colors' as c;
 
 $light-shadow: rgba(0, 0, 0, 0.25);
 $medium-shadow: rgba(0, 0, 0, 0.4);
@@ -10,4 +10,4 @@ $large-size: 800px;
 
 $box-shadow-width: 6px;
 
-$knights-yellow-border: $box-shadow-width solid $knights-yellow;
+$knights-yellow-border: $box-shadow-width solid c.$knights-yellow;

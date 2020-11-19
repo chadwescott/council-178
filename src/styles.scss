@@ -1,7 +1,8 @@
-@import 'assets/scss/variables';
-@import 'assets/scss/layout';
-@import 'assets/scss/mixins';
-@import 'assets/scss/placeholders';
+@use 'assets/scss/colors' as *;
+@use 'assets/scss/placeholders' as *;
+@use 'assets/scss/variables' as *;
+@use 'assets/scss/layout' as *;
+@use 'assets/scss/mixins' as *;
 
 @font-face {
   font-family: Gurajada;

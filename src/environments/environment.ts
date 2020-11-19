@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyCrsql6dDGQXYp7__FwPVGiuv8LKHnGov4',
+    authDomain: 'knights-of-columbus-178.firebaseapp.com',
+    databaseURL: 'https://knights-of-columbus-178.firebaseio.com',
+    projectId: 'knights-of-columbus-178',
+    storageBucket: 'knights-of-columbus-178.appspot.com',
+    messagingSenderId: '524188874200',
+    appId: '1:524188874200:web:b4e6801872d091f09caead',
+    measurementId: 'G-4532Y4MDK6'
+  }
 };
 
 /*

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ROUTES } from 'src/app/constants/routes';
 
 @Component({
   selector: 'kofc-main-header',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-header.component.scss']
 })
 export class MainHeaderComponent implements OnInit {
+  routes = ROUTES;
 
   constructor() { }
 

@@ -50,8 +50,8 @@ const routes: Routes = [
     MatButtonModule,
     MatIconModule,
     MatMenuModule,
-    MatToolbarModule
-    RouterModule.forRoot(routes, { useHash: true, relativeLinkResolution: 'legacy' })
+    MatToolbarModule,
+    RouterModule.forRoot(routes, { useHash: false })
   ],
   providers: [],
   bootstrap: [AppComponent]

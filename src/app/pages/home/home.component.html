@@ -1,9 +1,17 @@
 <kofc-main-layout>
+    <div class="flow-content">
     <div class="section">
         <h1 class="section__heading">Home Page</h1>
+    </div>
+    <div>
+        <kofc-member-form></kofc-member-form>
     </div>
     <div *ngFor="let user of firebaseService.users | async">
         <h3>{{ user | json }}</h3>
         <h3>{{ user.username }}</h3>
+        <h3>{{ user.firstName }}</h3>
+        <h3>{{ user.lastName }}</h3>
+        <h3>{{ user.email }}</h3>
     </div>
+</div>
 </kofc-main-layout>

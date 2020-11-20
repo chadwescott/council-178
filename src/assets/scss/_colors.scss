@@ -1,6 +1,9 @@
 @use '~@angular/material/theming';
 @include theming.mat-core();
 
+:root {
+--clr-bg: linear-gradient(150deg, red, maroon, red);
+}
 $app-primary: theming.mat-palette(theming.$mat-red, 900);
 $app-accent: theming.mat-palette(theming.$mat-red, 700, A400, 900);
 
@@ -12,7 +15,7 @@ $primary-color: red;
 $secondary-color: white;
 $primary-background-color: rgb(200, 0, 0);
 $secondary-background-color: white;
-$background-color: #ddd;
+$background-color: linear-gradient(150deg, lightgray, gray, lightgray);
 
 $knights-yellow: rgb(230, 172, 49);
 $knights-red: rgb(209, 43, 63);

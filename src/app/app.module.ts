@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
 import { AngularFireAuthModule } from '@angular/fire/auth';
@@ -22,6 +23,7 @@ import { ROUTES } from './constants/routes';
 import { TITLES } from './constants/titles';
 import { HomeComponent } from './pages/home/home.component';
 import { OfficersComponent } from './pages/officers/officers.component';
+import { MemberFormComponent } from './components/member-form/member-form.component';
 
 const routes: Routes = [
   { path: ROUTES.HOME, component: HomeComponent, pathMatch: 'full', data: { title: TITLES.HOME } },
@@ -36,7 +38,8 @@ const routes: Routes = [
     HomeComponent,
     OfficersComponent,
     MainHeaderComponent,
-    MainLayoutComponent
+    MainLayoutComponent,
+    MemberFormComponent
   ],
   imports: [
     BrowserModule,
@@ -51,6 +54,7 @@ const routes: Routes = [
     MatIconModule,
     MatMenuModule,
     MatToolbarModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes, { useHash: false })
   ],
   providers: [],

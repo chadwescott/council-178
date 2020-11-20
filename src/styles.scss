@@ -9,6 +9,16 @@
   src: url(./assets/fonts/Gurajada-Regular.ttf);
 }
 
+:root {
+  --spacer: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html,
 body {
   height: 100%;
@@ -16,14 +26,19 @@ body {
 
 body {
   font-family: Arial;
-  background-color: $background-color;
+  background-color: var(--clr-bg);
 }
 
-html,
-body {
-  height: 100%;
-}
-body {
+body,
+h1,
+h2,
+h3,
+h4,
+p
+{
   margin: 0;
-  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+.flow-content > * + * {
+  margin-top: var(--spacer);
 }

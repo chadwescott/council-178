@@ -1,0 +1,29 @@
+<form [formGroup]="form">
+  <input
+    placeholder="First Name"
+    formControlName="firstName"
+    type="text"
+    class="input-field col s12"
+  />
+  <input
+    placeholder="Last Name"
+    formControlName="lastName"
+    type="text"
+    class="input-field col s12"
+  />
+  <input
+    placeholder="Username"
+    formControlName="username"
+    type="text"
+    class="input-field col s12"
+  />
+  <input
+    placeholder="Email"
+    formControlName="email"
+    type="text"
+    class="input-field col s12"
+  />
+  <button (click)="onSubmit()">
+    Submit
+  </button>
+</form>

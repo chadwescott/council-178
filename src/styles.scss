@@ -4,6 +4,8 @@
 @import 'assets/scss/placeholders';
 @import 'assets/scss/formatting';
 
+@import '~quill/dist/quill.snow.css';
+
 @font-face {
   font-family: Gurajada;
   src: url(./assets/fonts/Gurajada-Regular.ttf);

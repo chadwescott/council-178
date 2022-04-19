@@ -1,5 +1,13 @@
 <kofc-main-layout>
     <div class="section">
         <h1 class="section__heading">Home Page</h1>
+        <div>Title <input type="text" [(ngModel)]="title" /></div>
+        <quill-editor (onContentChanged)="changedEditor($event)"></quill-editor>
+        <button (click)="save()">Save</button>
+    </div>
+    <div class="section" *ngIf="message">
+        <h1 class="section__heading">Display</h1>
+        <h2>{{title}}</h2>
+        <quill-view [content]="message"></quill-view>
     </div>
 </kofc-main-layout>

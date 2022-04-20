@@ -1,13 +1,15 @@
 @import 'colors';
 
-$light-shadow: rgba(0, 0, 0, 0.25);
-$medium-shadow: rgba(0, 0, 0, 0.4);
-$dark-shadow: rgba(0, 0, 0, 0.55);
-
 $small-size: 400px;
 $medium-size: 650px;
 $large-size: 800px;
 
-$box-shadow-width: 6px;
+:root {
+    --light-shadow: rgba(0, 0, 0, 0.25);
+    --medium-shadow: rgba(0, 0, 0, 0.4);
+    --dark-shadow: rgba(0, 0, 0, 0.55);
 
-$knights-yellow-border: $box-shadow-width solid $knights-yellow;
+    --box-shadow-width: 6px;
+
+    --knights-yellow-border: var(--box-shadow-width) solid var(--knights-yellow);
+}

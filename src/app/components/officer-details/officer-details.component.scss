@@ -2,8 +2,8 @@
 
 .officer-details {
   @extend %shadow-overlay-gradient;
-  border-top: $knights-yellow-border;
-  background-color: $knights-blue;
+  border-top: var(--knights-yellow-border);
+  background-color: var(--knights-blue);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -42,9 +42,9 @@
 
   &__footer {
     position: relative;
-    background-color: $knights-red;
-    border-top: $box-shadow-width solid $knights-yellow;
-    border-bottom: $box-shadow-width solid $knights-yellow;
+    background-color: var(--knights-red);
+    border-top: var(--box-shadow-width) solid var(--knights-yellow);
+    border-bottom: var(--box-shadow-width) solid var(--knights-yellow);
     width: 100%;
     padding: 0.4em 0.6em;
     display: flex;
@@ -80,7 +80,8 @@
     z-index: 2;
 
     & > img {
-      box-shadow: 0 0 0 1px $knights-blue, 0 0 0 4px $knights-yellow, 0 0 0 5px $knights-blue, 5px 5px 2px $light-shadow;
+      box-shadow: 0 0 0 1px var(--knights-blue), 0 0 0 4px var(--knights-yellow), 0 0 0 5px var(--knights-blue),
+        5px 5px 2px var(--light-shadow);
       margin: 5px;
       height: 38px;
       width: 38px;

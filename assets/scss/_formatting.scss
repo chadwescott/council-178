@@ -1,0 +1,16 @@
+.section {
+  margin: 1em;
+
+  &__heading {
+    font-size: 20px;
+    margin-bottom: 0.4em;
+
+    @media (min-width: var(--small-size)) {
+      font-size: 24px;
+    }
+
+    @media (min-width: var(--medium-size)) {
+      font-size: 36px;
+    }
+  }
+}

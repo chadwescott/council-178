@@ -1,7 +1,104 @@
-.hero-image {
-    height: 100%;
+@import '../../../assets/scss/variables';
+
+.splash-screen {
     width: 100%;
-    background-color: black;
-    background-image: url('../../../assets/images/st-theodore-church.jpg');
-    background-size: cover;
+
+    > div {
+        position: relative;
+        width: 100%;
+        font-size: 4rem;
+        font-family: 'Times New Roman', Times, serif;
+        text-shadow: 2px 2px rgba(0, 0, 0, 0.8);
+        color: white;
+        letter-spacing: 0.05em;
+        border-top: solid 0.05em var(--knights-yellow);
+        border-bottom: solid 0.05em var(--knights-yellow);
+        background-color: var(--knights-blue);
+
+        --delay: 1500ms;
+        --overlap: 250ms;
+
+        &::before {
+            content: '';
+            position: absolute;
+            height: 3.5em;
+            width: 3.5em;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            background-image: url('../../../assets/images/3rddegree-transparent.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: left;
+            opacity: 0.075;
+        }
+
+        @media (min-width: $medium-size) {
+            font-size: 8rem;
+        }
+
+        @media (min-width: $large-size) {
+            font-size: 12rem;
+        }
+
+        > div {
+            padding: 1rem;
+            flex: 1 1 auto;
+            display: flex;
+            justify-content: center;
+
+            > div {
+                z-index: 1;
+                animation-timing-function: linear();
+                animation-fill-mode: backwards;
+                animation-duration: var(--delay);
+            }
+
+            &:nth-child(odd) > div {
+                animation-name: appear-ltr;
+            }
+
+            &:nth-child(even) > div {
+                animation-name: appear-rtl;
+            }
+
+            &:nth-child(1) {
+                background-color: var(--knights-blue);
+            }
+
+            &:nth-child(2) {
+                background-color: var(--knights-yellow);
+
+                > div {
+                    animation-delay: calc(var(--delay) - var(--overlap));
+                }
+            }
+
+            &:nth-child(3) {
+                background-color: var(--knights-red);
+
+                > div {
+                    animation-delay: calc(var(--delay) * 2 - var(--overlap) * 2);
+                }
+            }
+        }
+    }
+}
+
+@keyframes appear-ltr {
+    from {
+        transform: translateX(-100vw);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes appear-rtl {
+    from {
+        transform: translateX(100vw);
+    }
+    to {
+        transform: translateX(0);
+    }
 }

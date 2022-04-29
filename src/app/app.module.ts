@@ -5,7 +5,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { QuillModule } from 'ngx-quill';
 
 import { AppComponent } from './app.component';
-import { MainHeaderComponent } from './components/main-header/main-header.component';
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
 import { OfficerDetailsComponent } from './components/officer-details/officer-details.component';
 import { OfficerListComponent } from './components/officer-list/officer-list.component';
@@ -26,7 +25,6 @@ const routes: Routes = [
     OfficerDetailsComponent,
     HomeComponent,
     OfficersComponent,
-    MainHeaderComponent,
     MainLayoutComponent
   ],
   imports: [

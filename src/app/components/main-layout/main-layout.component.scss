@@ -1,3 +1,98 @@
-.content {
+@import '../../../assets/scss/placeholders';
+
+.header {
+  @extend %primary-background-color;
+  @extend %dark-bottom-border;
+  @extend %text-shadow;
+  font-family: 'Neuton';
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  box-shadow: 0 2px 2px var(--light-shadow);
+
+  &__logo {
+    position: relative;
+    background-image: url('../../../assets/images/3rddegree-transparent.png');
+    background-size: cover;
+
+    margin-right: 0.6em;
+    height: 40px;
+    width: 40px;
+
+    @media (min-width: $medium-size) {
+      height: 50px;
+      width: 50px;
+    }
+
+    @media (min-width: $large-size) {
+      height: 70px;
+      width: 70px;
+    }
+  }
+
+  &__council-name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+
+  &--title {
+    font-size: 28px;
+    font-weight: 400;
+
+    @media (min-width: $medium-size) {
+      font-size: 32px;
+    }
+
+    @media (min-width: $large-size) {
+      font-size: 48px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &--subtitle {
+    font-size: 18px;
+    font-weight: 400;
+
+    @media (min-width: $medium-size) {
+      font-size: 20px;
+    }
+
+    @media (min-width: $large-size) {
+      font-size: 24px;
+    }
+  }
+}
+
+.menu {
   margin: 0.4em;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+
+  & > div:not(:last-child) {
+    &::after {
+      content: '|';
+      margin: 0 0.4em;
+    }
+  }
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  .content {
+    flex: 1 1 auto;
+    overflow: auto;
+  }
 }

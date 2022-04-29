@@ -1,4 +1,20 @@
-<kofc-main-header></kofc-main-header>
-<div class="content">
-    <ng-content></ng-content>
+<div class="layout">
+    <div class="header">
+        <div class="header__logo"></div>
+        <div class="header__council-name">
+            <h1 class="header--title">Archbishop Fulton J. Sheen</h1>
+            <h2 class="header--subtitle">Council #178</h2>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="menu__link">
+            <a [routerLink]="['/']">Home</a>
+        </div>
+        <div class="menu__link">
+            <a [routerLink]="['/officers']">Officers</a>
+        </div>
+    </div>
+    <div class="content">
+        <ng-content></ng-content>
+    </div>
 </div>
